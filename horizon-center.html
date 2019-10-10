@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>horizon-center</title>
+  </head>
+  <style>
+    body {
+      margin: 0;
+    }
+
+    #parent1 {
+      /* 只控制行内内容如何相对于他的块父元素对齐 */
+      text-align: center;
+    }
+
+    #son2 {
+      width: 100px;
+      margin: auto;
+      background-color: #00ff00;
+    }
+
+    #parent3 {
+      text-align: center;
+    }
+
+    .son3 {
+      display: inline-block;
+    }
+
+    #parent4 {
+      height: 500px;
+      width: 500px;
+      position: relative;
+      background-color: #f00;
+    }
+
+    #son4 {
+      position: absolute;
+      left: 50%;
+      width: 100px;
+      height: 100px;
+      background-color: #00ff00;
+      transform: translateX(-50%);
+    }
+
+    #parent5 {
+      display: flex;
+      justify-content: center;
+    }
+  </style>
+  <body>
+    <div id="parent1">
+      <span>123123</span>
+    </div>
+    <div>
+      <div id="son2">son2-2</div>
+    </div>
+    <div id="parent3">
+      <p class="son3">son3-1</p>
+      <p class="son3">son3-2</p>
+    </div>
+    <div id="parent4">
+      <p id="son4"></p>
+    </div>
+    <div id="parent5">
+      <div id="son5">
+        <p>123</p>
+        <p>234</p>
+        <p>345</p>
+      </div>
+    </div>
+  </body>
+</html>
