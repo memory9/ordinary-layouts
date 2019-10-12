@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <meta charset='UTF-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <meta http-equiv='X-UA-Compatible' content='ie=edge'>
+  <title>vertical-center</title>
+  <style>
+    #parent1 {
+      width: 100px;
+      height: 100px;
+      background-color: brown;
+      line-height: 100px;
+      margin: 10px 0;
+    }
+
+    #parent2 {
+      display: table-cell;
+      vertical-align: middle;
+      width: 100px;
+      height: 100px;
+      background-color: greenyellow;
+    }
+
+    #parent3 {
+      margin: 10px 0;
+      width: 100px;
+      height: 100px;
+      background-color: pink;
+      position: relative;
+    }
+
+    #son3 {
+      /*原理：子绝父相，top、right、bottom、left的值是相对于父元素尺寸的，然后margin或者transform是相对于自身尺寸的，组合使用达到水平居中的目的*/
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%); /* 这里也可以使用 margin-top 但是需要知道高度 */
+      /* height: 50px; */
+      /* margin-top: -25px; */
+    }
+
+    #parent4 {
+      margin: 10px 0;
+      width: 100px;
+      height: 100px;
+      background-color: yellow;
+      display: flex;
+      align-items: center;
+    }
+  </style>
+</head>
+<body>
+  <div id='parent1'>123123</div>
+  <div id='parent2'>
+    <div id='son2'>234234</div>
+  </div>
+  <div id='parent3'>
+    <div id='son3'>345345</div>
+  </div>
+  <div id='parent4'>
+    <div id='son4'>456456</div>
+  </div>
+</body>
+</html>
