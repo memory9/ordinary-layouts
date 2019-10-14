@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <meta charset='UTF-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <meta http-equiv='X-UA-Compatible' content='ie=edge'>
+  <title>horizon-vertical-center</title>
+  <style>
+    #parent1 {
+      width: 100px;
+      height: 100px;
+      background-color: blueviolet;
+      line-height: 100px;
+    }
+
+    #son1 {
+      /* ??? 这个属性怎么用的。。 */
+      vertical-align: middle;
+    }
+
+    #parent2 {
+      height: 150px;
+      width: 200px;
+      background-color: brown;
+      display: table-cell;
+      vertical-align: middle;
+    }
+
+    #son2 {
+      height: 50px;
+      width: 100px;
+      margin: 0 auto;
+      background-color: rgba(0, 0, 0, 0.6);
+    }
+
+    #parent3 {
+      height: 30px;
+      width: 75px;
+      background-color: yellowgreen;
+      outline: none;
+      border: none;
+    }
+
+    #parent4 {
+      width: 200px;
+      height: 100px;
+      background-color: yellow;
+      position: relative;
+    }
+
+    #son4 {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    #parent5 {
+      width: 200px;
+      height: 100px;
+      background-color: royalblue;
+      position: relative;
+    }
+
+    #son5 {
+      /* 原理：当top、bottom为0时,margin-top&bottom设置auto的话会无限延伸占满空间并且平分；当left、right为0时,margin-left&right设置auto的话会无限延伸占满空间并且平分 */
+      width: 90px;
+      height: 30px;
+      position: absolute;
+      margin: auto;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      background-color: rgba(0, 0, 0, 0.6);
+    }
+
+    #parent6 {
+      width: 200px;
+      height: 100px;
+      display: flex;
+      background-color: goldenrod;
+      align-items: center;
+      justify-content: center;
+    }
+  </style>
+</head>
+<body>
+  <div id='parent1'>
+    <div id='son1'>123123</div>
+  </div>
+  <div id='parent2'>
+    <div id='son2'></div>
+  </div>
+  <button id='parent3'>
+    <div id='son3'>expedita.</div>
+  </button>
+  <div id='parent4'>
+    <div id='son4'>lorem</div>
+  </div>
+  <div id='parent5'>
+    <div id='son5'></div>
+  </div>
+  <div id='parent6'>
+    <div id='son6'>123123</div>
+  </div>
+</body>
+</html>
