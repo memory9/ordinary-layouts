@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>two-column-1</title>
+    <style>
+      .container {
+        height: 500px;
+      }
+
+      #left1 {
+        background-color: #f00;
+        width: 100px;
+        height: 500px;
+        float: left;
+      }
+
+      #right1 {
+        background-color: #00f;
+        height: 500px;
+        margin-left: 100px;
+      }
+
+      #left2 {
+        background-color: #a00;
+        width: 100px;
+        height: 500px;
+        float: left;
+      }
+
+      #right-fix {
+        float: right;
+        width: 100%;
+        margin-left: -100px; /*正值大于或等于#left的宽度,才能显示在同一行*/
+      }
+
+      #right2 {
+        margin-left: 100px; /*大于或等于#left的宽度*/
+        background-color: #0f0;
+        height: 500px;
+      }
+
+      #left3 {
+        background-color: #f00;
+        float: left;
+        width: 100px;
+        height: 500px;
+      }
+      #right3 {
+        background-color: gray;
+        height: 500px;
+        overflow: hidden; /*触发bfc达到自适应*/
+      }
+
+      .parent {
+        height: 500px;
+        width: 100%;
+        display: table;
+      }
+
+      #left4 {
+        width: 100px;
+        background-color: #f00;
+      }
+
+      #right4 {
+        background-color: #0f0;
+      }
+
+      #left4,
+      #right4 {
+        display: table-cell; /*利用单元格自动分配宽度*/
+      }
+
+      #parent5 {
+        height: 500px;
+        position: relative;
+      }
+
+      #left5 {
+        position: absolute;
+        background-color: antiquewhite;
+        width: 100px;
+        height: 500px;
+        top: 0;
+        left: 0;
+      }
+
+      #right5 {
+        position: absolute;
+        background-color: aqua;
+        height: 500px;
+        top: 0;
+        right: 0;
+        left: 100px;
+      }
+
+      #parent6 {
+        height: 500px;
+        display: flex;
+      }
+
+      #left6 {
+        width: 100px;
+        background-color: blueviolet;
+        height: 500px;
+      }
+
+      #right6 {
+        height: 500px;
+        flex: auto;
+        background-color: brown;
+      }
+
+      #parent7 {
+        height: 500px;
+        display: grid;
+        grid-template-columns: 100px auto;
+      }
+
+      #left7 {
+        background-color: burlywood;
+      }
+
+      #right7 {
+        background-color: cadetblue;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div id="left1">左列定宽</div>
+      <div id="right1">右列自适应</div>
+    </div>
+    <div class="container">
+      <div id="left2">左列定宽</div>
+      <div id="right-fix">
+        <div id="right2">右列自适应</div>
+      </div>
+    </div>
+    <div class="container">
+      <div id="left3">左列定宽</div>
+      <div id="right3">右列自适应</div>
+    </div>
+    <div class="parent">
+      <div id="left4">左列定宽</div>
+      <div id="right4">右列自适应</div>
+    </div>
+    <div id="parent5">
+      <div id="left5">左列定宽</div>
+      <div id="right5">右列自适应</div>
+    </div>
+    <div id="parent6">
+      <div id="left6">左列定宽</div>
+      <div id="right6">右列自适应</div>
+    </div>
+    <div id="parent7">
+      <div id="left7">左列定宽</div>
+      <div id="right7">右列自适应</div>
+    </div>
+  </body>
+</html>
