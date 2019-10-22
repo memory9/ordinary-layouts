@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <meta charset='UTF-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <meta http-equiv='X-UA-Compatible' content='ie=edge'>
+  <title>two-column-2</title>
+  <style>
+    .parent {
+      margin-bottom: 100px;
+    }
+
+    .parent1 {
+      height: 500px;
+      padding-left: 100px; /* 抵消 .left1 的 margin-left 以达到 .parent1 水平居中 */
+    }
+
+    .left1 {
+      width: 100%;
+      height: 500px;
+      float: left;
+      margin-left: -100px; /* 正值等于 .right1 的高度 */
+      background-color: saddlebrown;
+    }
+
+    .right1 {
+      height: 500px;
+      width: 100px;
+      float: right;
+      background-color: blueviolet;
+    }
+
+    .left2 {
+      height: 500px;
+      background-color: wheat;
+      /* overflow: hidden; */
+    }
+
+    .right2 {
+      width: 100px;
+      height: 500px;
+      background-color: indianred;
+      float: right;
+    }
+
+    .parent3 {
+      width: 100%;
+      height: 500px;
+      display: table;
+    }
+
+    .left3 {
+      background-color: seagreen;
+      display: table-cell;
+    }
+
+    .right3 {
+      width: 100px;
+      background-color: darkgoldenrod;
+      display: table-cell;
+    }
+
+    .parent4 {
+      position: relative;
+      height: 500px;
+    }
+
+    .left4 {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 100px;
+      height: 500px;
+      background-color: fuchsia;
+    }
+
+    .right4 {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100px;
+      height: 500px;
+      background-color: green;
+    }
+
+    .parent5 {
+      height: 500px;
+      display: flex;
+    }
+
+    .left5 {
+      flex: auto;
+      background-color: indianred;
+    }
+
+    .right5 {
+      width: 100px;
+      background-color: rebeccapurple;
+    }
+
+    .parent6 {
+      height: 500px;
+      display: grid;
+      grid-template-columns: auto 100px;
+    }
+
+    .left6 {
+      background-color: cadetblue;
+    }
+
+    .right6 {
+      background-color: hotpink;
+    }
+  </style>
+</head>
+<body>
+  <div class='parent parent1'>
+    <div class='left1'>左侧自适应</div>
+    <div class='right1'>右侧定宽</div>
+  </div>
+  <div class='parent parent2'>
+    <div class='right2'>右侧定宽</div>
+    <div class='left2'>左侧自适应</div>
+  </div>
+  <div class='parent parent3'>
+    <div class='left3'>左侧自适应</div>
+    <div class='right3'>右侧定宽</div>
+  </div>
+  <div class='parent parent4'>
+    <div class='left4'>左侧自适应</div>
+    <div class='right4'>右侧定宽</div>
+  </div>
+  <div class='parent parent5'>
+    <div class='left5'>左侧自适应</div>
+    <div class='right5'>右侧定宽</div>
+  </div>
+  <div class='parent parent6'>
+    <div class='left6'>左侧自适应</div>
+    <div class='right6'>右侧定宽</div>
+  </div>
+</body>
+</html>
