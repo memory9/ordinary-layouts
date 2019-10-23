@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <meta charset='UTF-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <meta http-equiv='X-UA-Compatible' content='ie=edge'>
+  <title>two-column-3</title>
+  <style>
+    #left1 {
+      height: 500px;
+      background-color: salmon;
+      float: left;
+    }
+
+    #right1 {
+      height: 500px;
+      background-color: green;
+    }
+
+    #parent2 {
+      display: flex;
+    }
+
+    #left2 {
+      height: 500px;
+      background-color: orange;
+    }
+
+    #right2 {
+      height: 500px;
+      background-color: violet;
+      flex: 1;
+    }
+
+    #parent3 {
+      display: grid;
+      grid-template-columns: auto 1fr;
+    }
+
+    #left3 {
+      height: 500px;
+      background-color: cadetblue;
+    }
+
+    #right3 {
+      height: 500px;
+      background-color: hotpink;
+    }
+  </style>
+</head>
+<body>
+  <div id='parent1'>
+    <div id='left1'>左列不定宽123</div>
+    <div id='right1'>右列自适应</div>
+  </div>
+  <div id='parent2'>
+    <div id='left2'>左列不定宽1</div>
+    <div id='right2'>右列自适应</div>
+  </div>
+  <div id='parent3'>
+    <div id='left3'>左列不定宽22224424</div>
+    <div id='right3'>右列自适应</div>
+  </div>
+</body>
+</html>
