@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <meta charset='UTF-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <meta http-equiv='X-UA-Compatible' content='ie=edge'>
+  <title>three-column-grid</title>
+  <style>
+    #parent {
+      height: 500px;
+      display: grid;
+      grid-template-columns: 100px auto 200px;
+      grid-template-rows: 60px auto 60px;
+      grid-template-areas: "header header header" "leftside main rightside" "footer footer footer";
+    }
+
+    #header {
+      /* 指定在哪个网格区域 */
+      grid-area: header;
+      background-color: wheat;
+    }
+
+    #left {
+      grid-area: leftside;
+      background-color: darkgoldenrod;
+    }
+
+    #center {
+      grid-area: main;
+      margin: 0 15px;
+      border: 1px solid #000;
+      background-color: lightgreen;
+    }
+
+    #right {
+      grid-area: rightside;
+      background-color: cornflowerblue;
+    }
+
+    #footer {
+      grid-area: footer;
+      background-color: #ccc;
+    }
+  </style>
+</head>
+<body>
+  <div id='parent'>
+    <div id='header'></div>
+    <div id='center'>
+      中间自适应
+      <hr>
+    </div>
+    <div id='left'>左列定宽</div>
+    <div id='right'>右列定宽</div>
+    <div id='footer'></div>
+  </div>
+</body>
+</html>

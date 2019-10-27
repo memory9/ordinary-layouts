@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <meta charset='UTF-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <meta http-equiv='X-UA-Compatible' content='ie=edge'>
+  <title>three-colomn-table</title>
+  <style>
+    #parent {
+      width: 100%;
+      height: 500px;
+      display: table;
+    }
+
+    #left {
+      display: table-cell;
+      width: 100px;
+      background-color: firebrick;
+    }
+
+    #center {
+      display: table-cell;
+      background-color: lightblue;
+    }
+
+    #right {
+      display: table-cell;
+      width: 200px;
+      background-color: indigo;
+    }
+  </style>
+</head>
+<body>
+  <div id='parent'>
+    <div id='left'>左列定宽</div>
+    <div id='center'>中间自适应</div>
+    <div id='right'>右列定宽</div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>圣杯布局</title>
+    <style>
+      #header {
+        height: 60px;
+        background-color: #ccc;
+      }
+
+      #parent {
+        box-sizing: border-box;
+        height: 500px;
+        /* 为了使 center 摆正，左右 padding 分别等于左右盒子的宽，可以结合左右盒子相对定位的 left 调整间距 */
+        padding: 0 215px 0 115px;
+      }
+
+      #left {
+        margin-left: -100%;
+        position: relative;
+        left: -115px;
+        float: left;
+        width: 100px;
+        height: 500px;
+        background-color: violet;
+      }
+
+      #center {
+        float: left;
+        width: 100%;
+        height: 500px;
+        box-sizing: border-box;
+        border: 1px solid #000;
+        background-color: darkkhaki;
+      }
+
+      #right {
+        position: relative;
+        left: 215px;
+        width: 200px;
+        height: 500px;
+        margin-left: -200px;
+        float: left;
+        background-color: orange;
+      }
+
+      #footer {
+        height: 60px;
+        background-color: #ccc;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="header"></div>
+    <div id="parent">
+      <div id="center">
+        中间自适应
+        <hr />
+      </div>
+      <div id="left">左列定宽</div>
+      <div id="right">右列定宽</div>
+    </div>
+    <div id="footer"></div>
+  </body>
+</html>
