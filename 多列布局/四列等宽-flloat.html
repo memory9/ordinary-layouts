@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>四列等宽-float</title>
+    <style>
+      #parent {
+        margin-left: -20px;
+      }
+
+      .column {
+        padding-left: 20px;
+        width: 25%;
+        float: left;
+        box-sizing: border-box;
+        border: 1px solid #000;
+        background-clip: content-box;
+        height: 500px;
+      }
+
+      .column:nth-child(odd) {
+        background-color: salmon;
+      }
+
+      .column:nth-child(even) {
+        background-color: gold;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="parent">
+      <div class="column">
+        1
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa maxime
+          sint perspiciatis ab rerum tenetur fugit officia molestias
+          consequuntur iusto at nemo velit, eos illo numquam inventore et.
+          Corporis, pariatur?
+        </p>
+      </div>
+      <div class="column">
+        2
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti,
+          impedit. Non exercitationem quo error nemo ea placeat sunt quas at
+          magnam, aut sed corrupti vel numquam minima voluptates ullam atque.
+        </p>
+      </div>
+      <div class="column">
+        3
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus eos
+          explicabo impedit, iure illum ipsa, sit dolores et error eveniet
+          distinctio nesciunt eius, quaerat minus labore provident reprehenderit
+          facere iste.
+        </p>
+      </div>
+      <div class="column">
+        4
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus,
+          consequatur provident veniam aspernatur facilis nemo eligendi. Esse
+          unde corporis consequuntur labore dicta suscipit asperiores quaerat
+          dolore quia. Accusantium, nulla velit.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
